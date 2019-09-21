@@ -94,7 +94,7 @@ class CostController extends Controller
 					array_push($costArray[$checkClient['searchedAt']]['breakdown'][$checkProject['searchedAt']]['breakdown'][$checkParentCostType['searchedAt']]['breakdown'][$checkChildCostType['searchedAt']]['breakdown'], $checkSubChildCostType['data']);
 		    	}
 	    	}
-
+		    $costArray[$checkClient['searchedAt']]['amount'] = array_sum(array_column($costArray[$checkClient['searchedAt']]['breakdown'], 'amount')); 
 	    }
 		return json_encode(array('status' => 200, 'message' => 'Data fetched successfully', 'data' => $costArray));
 	}

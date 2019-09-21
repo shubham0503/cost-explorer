@@ -11,4 +11,4 @@
 4. Dump db.sql file /db.sql into your database
 5. Run below command
 	composer install
-6. Open postman, then hit the url which will come as output in the command prompt
+6. Open postman, then hit the url which will came as an output in the command prompt
